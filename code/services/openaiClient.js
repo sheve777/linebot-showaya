@@ -15,12 +15,15 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 // ---------- ③ Function Calling 定義 ----------
 const tools = [{
-  name: 'lookup_menu',
-  description: 'メニューIDを渡すと詳細(名前・価格・説明)を返す',
-  parameters: {
-    type: 'object',
-    properties: { id: { type: 'string' } },
-    required: ['id']
+  type: 'function',
+  function: {
+    name: 'lookup_menu',
+    description: 'メニューIDを渡すと詳細(名前・価格・説明)を返す',
+    parameters: {
+      type: 'object',
+      properties: { id: { type: 'string' } },
+      required: ['id']
+    }
   }
 }];
 
