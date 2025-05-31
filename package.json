@@ -1,0 +1,23 @@
+{
+  "name": "linebot-warawaya",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon code/server.js",
+    "start": "node code/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@line/bot-sdk": "^9.9.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "openai": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
