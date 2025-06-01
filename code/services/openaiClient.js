@@ -99,7 +99,7 @@ module.exports = async (event, client) => {
           content: JSON.stringify(item)                         // ← 詳細を返す
         }
       ],
-      console.log('[DEBUG] second content/head:', (second.choices[0].message.content || '').slice(0, 80));
+      //console.log('[DEBUG] second content/head:', (second.choices[0].message.content || '').slice(0, 80));
       temperature: 0.7,
       max_tokens: 256
     });
