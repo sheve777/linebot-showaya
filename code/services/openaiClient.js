@@ -73,7 +73,7 @@ module.exports = async (event, client) => {
     messages: baseMessages,
     tools,
     tool_choice: 'auto',
-    temperature: 0.7,
+    temperature: 0.8,
     max_tokens: 256,
     //response_format: { type: 'json_object' }  // 出力暴走防止
   });
@@ -100,7 +100,7 @@ module.exports = async (event, client) => {
         }
       ],
       //console.log('[DEBUG] second content/head:', (second.choices[0].message.content || '').slice(0, 80));
-      temperature: 0.7,
+      temperature: 0.8,
       max_tokens: 256
     });
     return reply(second.choices[0].message.content);
