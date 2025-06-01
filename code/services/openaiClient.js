@@ -69,7 +69,7 @@ module.exports = async (event, client) => {
   ];
 
   const first = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
+    model: 'gpt-4o',
     messages: baseMessages,
     tools,
     tool_choice: 'auto',
@@ -88,7 +88,7 @@ module.exports = async (event, client) => {
     const item   = menu.find(m => m.id === id);
 
     const second = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-4o',
       messages: [
         ...baseMessages,
         firstChoice.message,                                    // tool call
