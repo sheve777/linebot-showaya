@@ -75,7 +75,7 @@ module.exports = async (event, client) => {
     tool_choice: 'auto',
     temperature: 0.7,
     max_tokens: 256,
-    response_format: { type: 'json_object' }  // 出力暴走防止
+    //response_format: { type: 'json_object' }  // 出力暴走防止
   });
   console.log('[DEBUG] finish_reason:', first.choices[0].finish_reason);
   console.log('[DEBUG] content/head:', (first.choices[0].message.content || '').slice(0, 80));
