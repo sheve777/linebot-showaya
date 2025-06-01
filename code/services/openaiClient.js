@@ -107,7 +107,9 @@ module.exports = async (event, client) => {
       const second = await openai.chat.completions.create({
         model: 'gpt-4o',
         messages: [
-          ...baseMessages,
+          ...baseMessages,                       // persona 含む
++         { role: 'system',
++         content: '以降の返信も「昭和レトロ居酒屋の店主」の温かい口調を必ず維持し、必要なら軽いオヤジギャグを織り交ぜてください。' },
           choice.message,
           {
             role: 'tool',
